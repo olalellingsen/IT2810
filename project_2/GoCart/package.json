@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "back": "cd backend && npm run start",
+    "front": "cd frontend && npm install && npm run watch && npm run dev"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.37"
+  }
+}

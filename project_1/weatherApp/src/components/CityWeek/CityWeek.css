@@ -1,0 +1,6 @@
+.cityWeek {
+  background-color: var(--compBg);
+  border-radius: 20px;
+  margin-top: 5%;
+  padding: 1rem;
+}

@@ -1,0 +1,5 @@
+.cityList {
+  margin: 1rem;
+  overflow-y: scroll;
+  max-height: 80vh;
+}

@@ -1,0 +1,29 @@
+.favorite {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+  margin: auto;
+  width: 60%;
+}
+
+@media screen and (max-width: 1420px) {
+  .favorite {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .favorite {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .favorite {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .favorite {
+    width: 98%;
+  }
+}

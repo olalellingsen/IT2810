@@ -1,0 +1,151 @@
+nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: white;
+  background-color: var(--compBg);
+  padding: 0 1rem 0 1rem;
+  position: fixed;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+.navigationElement {
+  display: inline-block;
+  position: relative;
+  margin-left: 1rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navigationElement::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: green;
+  transition: width 0.25s ease-out;
+}
+
+.navigationElement:hover::before {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+span {
+  height: 0.25rem;
+  width: 100%;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.logoContainer {
+  color: black;
+}
+
+.logoContainer:hover {
+  color: black;
+}
+
+/* Initial styling for hamburger menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 40px;
+  height: 5px;
+  background-color: #333;
+  margin: 4px 0 0 0;
+  transition: 0.4s;
+}
+
+/* Styling when menu is open (cross) */
+.menu.open .bar1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.menu.open .bar2 {
+  opacity: 0;
+}
+
+.menu.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.linkstyle:hover {
+  color: black;
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .menu {
+    display: flex;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  ul.open {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .navigationElement {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  a {
+    margin: 0.2rem 0.5rem;
+  }
+}
